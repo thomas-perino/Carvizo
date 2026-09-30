@@ -65,7 +65,7 @@ export default function Footer() {
               </span>
             </Link>
             <p style={{ fontSize: "0.875rem", lineHeight: 1.7, maxWidth: "320px", marginBottom: "1.5rem" }}>
-              La première plateforme analytique dédiée aux professionnels et passionnés de l'achat-revente automobile. Données en temps réel, calculs déterministes.
+              Un outil pour explorer les opportunités d’achat-revente automobile. Catalogue de démonstration et import local d’annonces.
             </p>
           </div>
 
@@ -136,7 +136,7 @@ export default function Footer() {
                   cursor: "pointer",
                 }}
               >
-                S'inscrire
+                S’inscrire
               </button>
             </div>
           </div>

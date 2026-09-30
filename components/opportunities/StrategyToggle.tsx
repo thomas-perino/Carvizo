@@ -40,7 +40,8 @@ export default function StrategyToggle({ mode, counts, onChange }: StrategyToggl
             aria-selected={active}
             onClick={() => onChange(value)}
             style={{
-              flex: 1,
+              flex: "1 1 0",
+              minWidth: 0,
               display: "flex",
               alignItems: "center",
               gap: "0.625rem",

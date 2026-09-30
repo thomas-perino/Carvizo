@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
+import "@/components/import/import.css";
 
 export const metadata: Metadata = {
   title: "Carvizo — Analyse d'opportunités d'achat-revente automobile",

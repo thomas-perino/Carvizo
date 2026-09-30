@@ -69,7 +69,10 @@ export function parseMakeModelVersion(title: string): {
 }
 
 export function normalizeRawListing(raw: RawListing): NormalizedListing {
-  const { make, model, version } = parseMakeModelVersion(raw.title);
+  const parsed = parseMakeModelVersion(raw.title);
+  const make = raw.make ?? parsed.make;
+  const model = raw.model ?? parsed.model;
+  const version = raw.version === undefined ? parsed.version : raw.version;
 
   return {
     vehicle: {
@@ -90,7 +93,7 @@ export function normalizeRawListing(raw: RawListing): NormalizedListing {
       externalId: raw.externalId,
       title: raw.title,
       description: raw.description,
-      price: parsePrice(raw.priceRaw),
+      price: raw.price ?? parsePrice(raw.priceRaw),
       images: raw.images,
       sellerType: parseSellerType(raw.sellerTypeRaw),
       publishedAt: raw.publishedAt,

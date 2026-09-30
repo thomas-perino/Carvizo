@@ -24,6 +24,7 @@ export interface TotalInvestmentInput {
   repairCostEstimated: number;
   preparationCost: number;
   unexpectedCost: number;
+  storageCost?: number;
 }
 
 export function computeTotalInvestment(input: TotalInvestmentInput): number {
@@ -34,6 +35,7 @@ export function computeTotalInvestment(input: TotalInvestmentInput): number {
     repairCostEstimated,
     preparationCost,
     unexpectedCost,
+    storageCost = 0,
   } = input;
 
   return (
@@ -42,7 +44,8 @@ export function computeTotalInvestment(input: TotalInvestmentInput): number {
     transportCost +
     repairCostEstimated +
     preparationCost +
-    unexpectedCost
+    unexpectedCost +
+    storageCost
   );
 }
 

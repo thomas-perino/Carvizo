@@ -9,7 +9,9 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "seed": "tsx scripts/seed-supabase.ts"
+    "seed": "tsx scripts/seed-supabase.ts",
+    "import:listings": "node --import tsx scripts/import-listings.ts",
+    "build:sites": "CARVIZO_STATIC_EXPORT=1 next build"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",

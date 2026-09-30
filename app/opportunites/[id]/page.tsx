@@ -10,6 +10,7 @@ import RiskBadge from "@/components/ui/RiskBadge";
 import ScenarioCard from "@/components/ui/ScenarioCard";
 import ValueEstimateCard from "@/components/ui/ValueEstimateCard";
 import { getOpportunityById } from "@/lib/data/get-opportunities";
+import { getDemoOpportunities } from "@/lib/data/demo-opportunities";
 import { formatCurrency, formatMileage } from "@/lib/format";
 import { fuelTypeLabels, transmissionLabels } from "@/lib/labels";
 import {
@@ -22,8 +23,14 @@ import {
   ShieldAlert,
 } from "lucide-react";
 
-export default async function OpportunityDetailPage({ params }: { params: { id: string } }) {
-  const opportunity = await getOpportunityById(params.id);
+export async function generateStaticParams() {
+  if (process.env.CARVIZO_STATIC_EXPORT !== "1") return [];
+  return (await getDemoOpportunities()).map(o => ({ id: o.listing.id }));
+}
+
+export default async function OpportunityDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const opportunity = await getOpportunityById(id);
   if (!opportunity) notFound();
 
   const { vehicle, listing, analysis } = opportunity;

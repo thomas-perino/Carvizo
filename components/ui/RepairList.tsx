@@ -19,7 +19,7 @@ export default function RepairList({ repairs }: { repairs: Repair[] }) {
         }}
       >
         <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--green-strong)" }}>
-          Aucune réparation majeure identifiée dans l'annonce.
+          Aucune réparation majeure identifiée dans l’annonce.
         </span>
       </div>
     );

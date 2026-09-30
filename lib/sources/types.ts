@@ -14,6 +14,11 @@ export interface RawListing {
   externalId: string;
   url: string;
   title: string;
+  /** Champs structurés fournis par un flux : éviter de deviner un modèle dans le titre. */
+  make?: string;
+  model?: string;
+  version?: string | null;
+  price?: number;
   description: string;
   priceRaw: string;
   mileageRaw: string;
