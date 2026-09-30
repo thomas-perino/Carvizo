@@ -11,6 +11,15 @@ combine le tout en un **Deal Score** explicable sur 100.
 > l'application ne correspond à un véhicule réellement en vente. Voir
 > [Ce qui reste à faire](#ce-qui-reste-à-faire).
 
+## Import d’annonces (première étape)
+
+La page **Mes annonces** (`/importer`) permet d’importer un export JSON autorisé
+ou de saisir un véhicule, puis de simuler la marge avec des coûts renseignés,
+stockage compris. La collection est locale au navigateur, distincte des données
+de démonstration. **Aucune source externe n’est connectée automatiquement.**
+Un connecteur de flux JSON et une commande d’import serveur sont préparés.
+Voir [le format, les limites et les étapes de connexion](docs/import-annonces.md).
+
 ---
 
 ## Sommaire

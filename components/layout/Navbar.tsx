@@ -21,6 +21,7 @@ export default function Navbar() {
 
   return (
     <header
+      className="carvizo-navbar"
       style={{
         position: "sticky",
         top: 0,
@@ -97,6 +98,7 @@ export default function Navbar() {
           {[
             { href: "/", label: "Accueil" },
             { href: "/opportunites", label: "Opportunités" },
+            { href: "/importer", label: "Mes annonces" },
           ].map(({ href, label }) => {
             const active = isActive(href);
             return (

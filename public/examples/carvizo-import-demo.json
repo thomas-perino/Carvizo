@@ -1,0 +1,21 @@
+{
+  "listings": [
+    {
+      "source": "demo",
+      "externalId": "exemple-fictif-001",
+      "url": "https://example.com/annonce-fictive",
+      "make": "Renault",
+      "model": "Clio",
+      "version": "Véhicule fictif — exemple de format",
+      "year": 2015,
+      "mileage": 110000,
+      "price": 6000,
+      "fuelType": "essence",
+      "transmission": "manuelle",
+      "sellerType": "particulier",
+      "location": "Marseille",
+      "publishedAt": "2026-09-30T12:00:00Z",
+      "description": "EXEMPLE FICTIF : ce véhicule n’est pas en vente."
+    }
+  ]
+}
